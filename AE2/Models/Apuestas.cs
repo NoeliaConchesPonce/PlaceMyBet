@@ -26,4 +26,23 @@ namespace AE2.Models
         public int idEvento { get; set; }
         public string emailUsuario { get; set; }
     }
+    public class ApuestasDTO
+    {
+        public ApuestasDTO(int idMercado, string tipoApuesta, double cuota, double dineroApuesta, string fecha, int idEvento, string emailUsuario)
+        {
+            this.idMercado = idMercado;
+            this.tipoApuesta = tipoApuesta;
+            this.cuota = cuota;
+            this.dineroApuesta = dineroApuesta;
+            this.fecha = fecha;
+            this.emailUsuario = emailUsuario;
+        }
+
+        public int idMercado { get; set; }
+        public string tipoApuesta { get; set; }
+        public double cuota { get; set; }
+        public double dineroApuesta { get; set; }
+        public string fecha { get; set; }
+        public string emailUsuario { get; set; }
+    }
 }

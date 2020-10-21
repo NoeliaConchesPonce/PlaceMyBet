@@ -49,5 +49,37 @@ namespace AE2.Models
 
             }
         }
+        internal List<EventosDTO> retrieveDTO()
+        {
+            MySqlConnection conectar = Connect();
+            MySqlCommand comando = conectar.CreateCommand();
+            comando.CommandText = "Select * from Eventos";
+            try
+            {
+                conectar.Open();
+
+                MySqlDataReader reader = comando.ExecuteReader();
+
+                List<EventosDTO> eventoDTO = new List<EventosDTO>();
+                while (reader.Read())
+                {
+                    EventosDTO d = new EventosDTO(reader.GetString(0), reader.GetString(1), reader.GetMySqlDateTime(2).ToString());
+
+                    eventoDTO.Add(d);
+
+                }
+
+                conectar.Close();
+                return eventoDTO;
+
+            }
+            catch (MySqlException e)
+            {
+                Debug.WriteLine("No ha podido realizarse la conexión con la base de datos.");
+                return null;
+
+            }
+        }
     }
+    
 }

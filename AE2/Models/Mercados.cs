@@ -26,4 +26,18 @@ namespace AE2.Models
         public double dineroUnder { get; set; }
         public int idEvento { get; set; }
     }
+    public class MercadosDTO
+    {
+        public MercadosDTO(int idMercado, double overUnder, double cuotaOver, double cuotaUnder, double dineroOver, double dineroUnder, int idEvento)
+        {
+
+            this.overUnder = overUnder;
+            this.cuotaOver = cuotaOver;
+            this.cuotaUnder = cuotaUnder;
+        }
+
+        public double overUnder { get; set; }
+        public double cuotaOver { get; set; }
+        public double cuotaUnder { get; set; }
+    }
 }

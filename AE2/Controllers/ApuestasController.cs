@@ -25,8 +25,10 @@ namespace AE2.Controllers
         }
 
         // POST: api/Apuestas
-        public void Post([FromBody]string value)
+        public void Post([FromBody]Apuestas apuesta)
         {
+            var repositorio = new Apuestas_Repository();
+            repositorio.Save(apuesta);
         }
 
         // PUT: api/Apuestas/5
