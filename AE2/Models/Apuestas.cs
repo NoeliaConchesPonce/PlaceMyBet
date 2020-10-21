@@ -28,7 +28,7 @@ namespace AE2.Models
     }
     public class ApuestasDTO
     {
-        public ApuestasDTO(int idMercado, string tipoApuesta, double cuota, double dineroApuesta, string fecha, int idEvento, string emailUsuario)
+        public ApuestasDTO(int idMercado, string tipoApuesta, double cuota, double dineroApuesta, string fecha, string emailUsuario)
         {
             this.idMercado = idMercado;
             this.tipoApuesta = tipoApuesta;

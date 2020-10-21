@@ -64,7 +64,7 @@ namespace AE2.Models
                 List<ApuestasDTO> apuestaDTO = new List<ApuestasDTO>();
                 while (reader.Read())
                 {
-                    ApuestasDTO a = new ApuestasDTO(reader.GetInt32(0), reader.GetString(1), reader.GetDouble(2), reader.GetDouble(3), reader.GetMySqlDateTime(4).ToString(), reader.GetInt32(5), reader.GetString(6));
+                    ApuestasDTO a = new ApuestasDTO(reader.GetInt32(0), reader.GetString(1), reader.GetDouble(2), reader.GetDouble(3), reader.GetMySqlDateTime(4).ToString(), reader.GetString(5));
 
                     apuestaDTO.Add(a);
 
